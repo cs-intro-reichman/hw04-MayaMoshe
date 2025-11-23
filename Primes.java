@@ -10,8 +10,8 @@ public class Primes {
         }
         int p=2;
         while (p*p<=n) {
-            int mult =p*p;
             if (isPrime[p]) {
+                int mult =p*p;
                 isPrime[mult]=false;
                 mult = mult+p;
             }
@@ -27,6 +27,6 @@ public class Primes {
             }
             numbers++;
         }
-        System.out.println("There are "+count+" primes between 2 and "+n+" (" +(count*100/n)+ " are primes)");
+        System.out.println("There are "+count+" primes between 2 and "+n+" (" +((count*100)/n)+ "% are primes)");
     }
 }
