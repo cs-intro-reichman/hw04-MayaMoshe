@@ -11,7 +11,7 @@ public class Primes {
         int p=2;
         while (p*p<=n) {
             if (isPrime[p]) {
-                int mult =p*2;
+                int mult =p+p;
                 isPrime[mult]=false;
                 mult = mult+p;
             }
