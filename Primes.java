@@ -12,8 +12,10 @@ public class Primes {
         while (p*p<=n) {
             if (isPrime[p]) {
                 int mult =p+p;
+                while(mult<=n){
                 isPrime[mult]=false;
                 mult = mult+p;
+                }
             }
             p++;
         }
@@ -22,7 +24,7 @@ public class Primes {
         int numbers=2;
         while (numbers<=n) {
             if (isPrime[numbers]) {
-                System.out.println(numbers);
+                System.out.println(numbers);    
                 count++;
             }
             numbers++;
