@@ -171,6 +171,9 @@ public class ArrCharOps {
             if (c2<c1) {
                 return 1;
             }
+            else{
+                return 0;
+            }
         }
         if (str1.length()<str2.length()){
             return -1;
@@ -178,7 +181,7 @@ public class ArrCharOps {
         else if (str1.length()>str2.length()){
             return 1;
         }
-        else{
+        else {
             return 0;
         }
         
