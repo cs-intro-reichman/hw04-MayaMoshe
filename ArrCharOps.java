@@ -158,15 +158,9 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
+        int minLen = Math.min(str1.length(),str2.length());
         if (str1==null || str2==null){
             return -2;
-        }
-        int minLen =0;
-        if (str1.length()<str2.length()){
-            minLen=str1.length();
-        }
-        if (str2.length()<str1.length()){
-            minLen=str2.length();
         }
         for (int i=0; i<minLen;i++){
             char c1 = str1.charAt(i);
