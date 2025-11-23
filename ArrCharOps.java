@@ -97,7 +97,7 @@ public class ArrCharOps {
             newArr[i]=arr1[i];
         }
         for (int i=0; i<arr2.length;i++){
-            newArr[i]=arr2[i];
+            newArr[arr1.length+i]=arr2[i];
         }
         
         return newArr;
@@ -111,7 +111,7 @@ public class ArrCharOps {
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
         char [] sub = new char[endIndex-beginIndex];
         for (int i=0; i<sub.length; i++){
-            sub[i]= arr[beginIndex+1];
+            sub[i]= arr[beginIndex+i];
         }
         return sub;
     }
@@ -126,7 +126,8 @@ public class ArrCharOps {
     public static long hashCode(char[] arr) {
         long hash = 0;
         for (int i = 0; i<arr.length; i++){
-            hash = arr[i]*7^(arr.length-1);
+            hash = hash*7;
+            hash = hash+arr[i];
         }
         return hash;
     }
